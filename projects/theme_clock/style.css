@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #fff;
+    --reddish-color: #e74c3c;
+}
+
+html {
+    transition: all 500ms ease;
+}
+
+html.dark {
+    --primary-color: #fff;
+    --secondary-color: #000;
+
+    background-color: #111;
+    color: var(--primary-color);
+}
+
+#home {
+    background-color: #000a;
+    border-color: #555;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 5px #000a;
+    cursor: pointer;
+    fill: #fff;
+    height: 30px;
+    right: 1rem;
+    padding: 5px;
+    position: fixed;
+    bottom: 1rem;
+    width: 30px;
+    z-index: 99;
+}
+
+body {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    place-content: center;
+    place-items: center;
+}
+
+.toggle {
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    color: var(--secondary-color);
+    cursor: pointer;
+    padding: 8px 12px;
+    position: absolute;
+    top: 100px;
+    z-index: 9999;
+}
+
+.toggle:focus {
+    outline: none;
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    place-content: space-between;
+    place-items: center;
+}
+
+.clock {
+    height: 200px;
+    position: relative;
+    width: 200px;
+}
+
+.needle {
+    background-color: var(--primary-color);
+    height: 100px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform-origin: bottom center;
+    width: 3px;
+}
+
+.needle.hour {
+    height: 65px;
+    transform: translate(-50%, -100%)
+               rotate(0deg);
+}
+
+.needle.minute {
+    transform: translate(-50%, -100%)
+               rotate(30deg);
+}
+
+.needle.second {
+    background-color: var(--reddish-color);
+    transform: translate(-50%, -100%)
+               rotate(60deg);
+}
+
+.center-point {
+    background-color: var(--reddish-color);
+    border-radius: 50%;
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+}
+
+.center-point::after {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    content: "";
+    height: 5px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+.time {
+    font-size: 60px;
+}
+
+.date {
+    color: #aaa;
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    place-content: space-between;
+    place-items: center;
+    text-transform: uppercase;
+}
+
+.date span+span {
+    margin-left: 0.3rem;
+}
+
+.date .circle {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: var(--secondary-color);
+    display: inline-flex;
+    font-size: 11px;
+    height: 18px;
+    place-content: center;
+    place-items: center;
+    transition: all 500ms ease;
+    width: 18px;
+}

@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#home {
+    background-color: #000a;
+    border-color: #666;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 5px #000a;
+    cursor: pointer;
+    fill: #fff;
+    height: 30px;
+    right: 1rem;
+    padding: 5px;
+    position: fixed;
+    bottom: 1rem;
+    width: 30px;
+    z-index: 99;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    place-content: center;
+    place-items: center;
+}
+
+#canvas {
+    border-color: #666;
+    border-radius: 5px 5px 0 0;
+    border-style: solid;
+    border-width: 2px;
+}
+
+.toolbox {
+    background-color: #333;
+    border-color: #666;
+    border-radius: 0 0 5px 5px;
+    border-style: solid;
+    border-width: 2px;
+    display: flex;
+    padding: 1rem;
+    width: 804px;
+}
+
+.toolbox > * {
+    background-color: #222;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 2rem;
+    height: 50px;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    place-content: center;
+    place-items: center;
+    width: 50px;
+}
+
+.toolbox > *:last-child {
+    margin-left: auto;
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#home {
+    background-color: #000a;
+    border-color: #555;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 5px #000a;
+    cursor: pointer;
+    fill: #fff;
+    height: 30px;
+    right: 1rem;
+    padding: 5px;
+    position: fixed;
+    bottom: 1rem;
+    width: 30px;
+    z-index: 99;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    place-content: center;
+    place-items: center;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+  min-width: 500px;
+}
+
+.carousel {
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #0006;
+  height: 530px;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+}
+
+.image-container {
+  display: flex;
+  height: 500px;
+  transform: translateX(0);
+  transition: transform 500ms ease-in-out;
+}
+
+.buttons-container {
+  display: flex;
+  place-content: space-between;
+  width: 100%;
+}
+
+.btn {
+  background-color: rebeccapurple;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem;
+  width: 49.9%;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: none;
+}

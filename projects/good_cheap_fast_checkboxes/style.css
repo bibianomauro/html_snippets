@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#home {
+    background-color: #000a;
+    border-color: #555;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 5px #000a;
+    cursor: pointer;
+    fill: #fff;
+    height: 30px;
+    right: 1rem;
+    padding: 5px;
+    position: fixed;
+    bottom: 1rem;
+    width: 30px;
+    z-index: 99;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    place-content: center;
+    place-items: center;
+}
+
+.toggle-container {
+  display: flex;
+  margin: 10px 0;
+  place-items: center;
+  width: 200px;
+}
+
+.toggle {
+  visibility: hidden;
+}
+
+.label {
+  background-color: #707070;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  margin-right: 15px;
+  position: relative;
+  width: 80px;
+}
+
+.toggle:checked + .label {
+  background-color: #ddd;
+}
+
+.toggle:checked + .label .ball {
+  /*animation-duration: 300ms;
+  animation-name: slide-on;
+  animation-timing-function: linear;*/
+
+  transform: translateX(40px);
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+.ball {
+  /*animation-duration: 300ms;
+  animation-name: slide-off;
+  animation-timing-function: linear;*/
+
+  background: #222;
+  border-radius: 50%;
+  height: 34px;
+  left: 3px;
+  place-content: center;
+  place-items: center;
+  position: absolute;
+  top: 3px;
+  width: 34px;
+
+  transition-duration: 200ms;
+  transition-timing-function: linear;
+}
+
+@keyframes slide-on {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes slide-off {
+  0% {
+    transform: translateX(40px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

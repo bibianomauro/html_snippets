@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rola Catch Game</title>
+  </head>
+  <body>
+    <div class="screen">
+      <h1>Catch the Rola</h1>
+      <button class="btn" id="start-btn">Play Game</button>
+    </div>
+
+    <div class="screen">
+      <h1>What is your favorite Rola?</h1>
+      <ul class="rola-list">
+        <li>
+          <button class="choose-rola-btn">
+            <p>Rola Brava</p>
+            <small>(Streptopelia turtur)</small>
+            <img src="./turtur.png" alt="brava"/>
+          </button>
+        </li>
+        <li>
+          <button class="choose-rola-btn">
+            <p>Rola Mansa</p>
+            <small>(Streptopelia roseogrisea)</small>
+            <img src="./roseogrisea.png" alt="mansa" />
+          </button>
+        </li>
+        <li>
+          <button class="choose-rola-btn">
+            <p>Rola Gemedora</p>
+            <small>(Streptopelia decipiens)</small>
+            <img src="./decipiens.png" alt="gemedora" />
+          </button>
+        </li>
+        <li>
+          <button class="choose-rola-btn">
+            <p>Rola d'Olho Vermelho</p>
+            <small>(Streptopelia semitorquata)</small>
+            <img src="./semitorquata.png" alt="olho_vermelho" />
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="screen game-container">
+      <h3 id="time">Time: 00:00</h3>
+      <h4 id="score">Score: 0</h4>
+      <h5 id="message">Pruuuuuuuuu</h5>
+    </div>
+
+    <a id="home" href="../../index.html">
+      <svg class="svg" viewBox="0 0 640 640">
+        <path
+          d="M73.4 297.4C60.9 309.9 60.9 330.2 73.4 342.7L233.4 502.7C245.9 515.2 266.2 515.2 278.7 502.7C291.2 490.2 291.2 469.9 278.7 457.4L173.3 352L544 352C561.7 352 576 337.7 576 320C576 302.3 561.7 288 544 288L173.3 288L278.7 182.6C291.2 170.1 291.2 149.8 278.7 137.3C266.2 124.8 245.9 124.8 233.4 137.3L73.4 297.3z"
+        />
+      </svg>
+    </a>
+    <script src="script.js"></script>
+  </body>
+</html>

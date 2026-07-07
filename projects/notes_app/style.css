@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+  --primary: #528eb8;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#home {
+    background-color: #000a;
+    border-color: #555;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 5px #000a;
+    cursor: pointer;
+    fill: #fff;
+    height: 30px;
+    right: 1rem;
+    padding: 5px;
+    position: fixed;
+    bottom: 1rem;
+    width: 30px;
+    z-index: 99;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.add {
+  background-color: var(--primary);
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+}
+
+.note {
+  background-color: #333;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 4px #0002;
+  height: 500px;
+  margin: 30px 20px;
+  width: 400px;
+}
+
+.note .tools {
+  background-color: var(--primary);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  display: flex;
+  padding: 0.5rem;
+  place-content: flex-end;
+}
+
+.note .tools button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.note .main {
+  padding: 0.5rem;
+}
+
+.note textarea {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.2rem;
+  height: 93%;
+  padding: 1rem;
+  width: 100%;
+}
+
+.note textarea:focus {
+  outline: none;
+}

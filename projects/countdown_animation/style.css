@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+  --in-out-duration: 500ms;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#home {
+    background-color: #000a;
+    border-color: #555;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 5px #000a;
+    cursor: pointer;
+    fill: #fff;
+    height: 30px;
+    right: 1rem;
+    padding: 5px;
+    position: fixed;
+    bottom: 1rem;
+    width: 30px;
+    z-index: 99;
+}
+
+body {
+    background-color: #222;
+    color: #fff;
+    font-family: 'Ubuntu', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h4 {
+  font-size: 20px;
+  margin: 5px;
+  text-transform: uppercase;
+}
+
+.counter {
+  left: 50%;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.counter.hide {
+  animation-duration: 200ms;
+  animation-name: hide;
+  animation-timing-function: ease-out;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.final {
+  left: 50%;
+  position: fixed;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.final.show {
+  animation-duration: 200ms;
+  animation-name: show;
+  animation-timing-function: ease-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.final button {
+  background-color: transparent;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.3rem 0.69rem;
+}
+
+.nums {
+  color: #3498db;
+  font-size: 50px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+}
+
+.nums span {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  transform-origin: bottom center;
+}
+
+.nums span.in {
+  animation-name: go-in;
+  animation-duration: var(--in-out-duration);
+  animation-timing-function: ease-in-out;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.nums span.out {
+  animation-name: go-out;
+  animation-duration: var(--in-out-duration);
+  animation-timing-function: ease-in-out;
+}
+
+/*      Animations      */
+
+@keyframes hide {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  30% {
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes go-in {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  30% {
+    transform: translate(-50%, -50%) rotate(-20deg);
+  }
+
+  60% {
+    transform: translate(-50%, -50%) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes go-out {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  60% {
+    transform: translate(-50%, -50%) rotate(20deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+}
