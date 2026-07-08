@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#home {
+  background-color: #000a;
+  border-color: #555;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 5px 5px #000a;
+  cursor: pointer;
+  fill: #fff;
+  height: 30px;
+  right: 1rem;
+  padding: 5px;
+  position: fixed;
+  bottom: 1rem;
+  width: 30px;
+  z-index: 99;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  place-content: center;
+  place-items: center;
+}
+
+span {
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-name: glitch;
+  font-size: 3rem;
+  font-weight: bold;
+  position: absolute;
+  text-shadow:   0.05em     0em 0em #f00b,
+               -0.025em -0.05em 0em #0f0b,
+                0.025em  0.05em 0em #00fb;
+  text-transform: uppercase;
+}
+
+span.mask_up {
+  animation-duration: 700ms;
+  clip-path: polygon(  0%  0%,
+                     100%  0%,
+                     100% 30%,
+                       0% 60%);
+  transform: translate(-0.025em, -0.0125em);
+}
+
+span.mask_down {
+  animation-duration: 500ms;
+  clip-path: polygon(  0%  60%,
+                     100%  30%,
+                     100% 100%,
+                       0% 100%);
+  transform: translate(0.0125em, 0.025em);
+}
+
+@keyframes glitch {
+   0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  74% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75),
+      0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  75% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  } 
+}
