@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+:root {
+  --clr-1: #052b2f;
+  --clr-2: #073438;
+  --clr-3: #0e4b50;
+  --clr-4: #2d8f85;
+  --clr-5: #637c54;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#home {
+  background-color: #000a;
+  border-color: #555;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 5px 5px #000a;
+  cursor: pointer;
+  fill: #fff;
+  height: 30px;
+  right: 1rem;
+  padding: 5px;
+  position: fixed;
+  bottom: 1rem;
+  width: 30px;
+  z-index: 99;
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Ubuntu', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  place-content: center;
+  place-items: center;
+}
+
+.card {
+  aspect-ratio: 1 / 1.5;
+  background-color: var(--clr-1);
+  border-radius: 0.5rem;
+  height: 60vh;
+  margin: 0 auto;
+  position: relative;
+}
+.card::before, .card::after {
+  background: conic-gradient(
+    from 0deg,
+    var(--clr-3),
+    var(--clr-4),
+    var(--clr-5),
+    var(--clr-4),
+    var(--clr-3));
+  border-radius: inherit;
+  content: "";
+  inset: -0.5rem;
+  position: absolute;
+  z-index: -1;
+}
+.card::after {
+  filter: blur(3.5rem);
+}
